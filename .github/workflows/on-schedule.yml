@@ -1,0 +1,17 @@
+name: On Schedule
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '* 5 * * *'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  todo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: TODO
+        run: echo "TODO"

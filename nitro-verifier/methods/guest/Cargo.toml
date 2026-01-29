@@ -1,0 +1,15 @@
+[package]
+categories = []
+description = "A RISC0 zkVM for erifying Nitro Enclave Attestations"
+edition = "2024"
+keywords = ["zkvm", "risc0", "aws-nitro-enclave", "attestation"]
+license = "UNLICENSED"
+name = "multiply"
+readme = "../../README.md"
+repository = "https://github.com/tahardi/bearzero"
+version = "0.1.0"
+
+[workspace]
+
+[dependencies]
+risc0-zkvm = { version = "^3.0.4", default-features = false, features = ['std'] }

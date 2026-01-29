@@ -1,0 +1,22 @@
+[advisories]
+ignore = [
+    # No fix available
+    "RUSTSEC-2023-0071",
+    # Unmaintained - transitive dep
+    "RUSTSEC-2024-0436",
+    # Unmaintained - transitive dep
+    "RUSTSEC-2025-0119",
+    # Unmaintained - transitive dep
+    "RUSTSEC-2024-0388",
+    # Unmaintained - transitive dep
+    "RUSTSEC-2025-0141",
+    # Unmaintained - transitive dep
+    "RUSTSEC-2023-0089",
+    # Fix available but pulled in by transitive dep
+    "RUSTSEC-2025-0055",
+]
+severity_threshold = "low"
+
+[output]
+quiet = true
+show_tree = false

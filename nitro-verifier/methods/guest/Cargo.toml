@@ -1,6 +1,6 @@
 [package]
 categories = []
-description = "A RISC0 zkVM for erifying Nitro Enclave Attestations"
+description = "A RISC0 zkVM for verifying Nitro Enclave Attestations"
 edition = "2024"
 keywords = ["zkvm", "risc0", "aws-nitro-enclave", "attestation"]
 license = "UNLICENSED"

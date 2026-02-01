@@ -1,0 +1,41 @@
+# Workspaces are not crates themselves. Instead, they setup and build
+# member crates. For instance, the `sev-verifier/` project has
+# a `host` and `methods` crates which we specify as members
+[workspace]
+# Enable modern feature resolver (standard for Rust 2024+)
+resolver = "3"
+# Provide paths to directories containing crates in the workspace
+members = ["host", "methods"]
+
+# Place shared dependences here. In member crates set shared dependencies to
+# workspace = true
+[workspace.dependencies]
+risc0-build = { version = "^3.0.4" }
+risc0-zkvm = { version = "^3.0.4" }
+
+# Use latest edition
+[workspace.package]
+edition = "2024"
+
+# https://doc.rust-lang.org/cargo/reference/profiles.html
+# Configures bencharks
+[profile.bench]
+
+# Configures debug builds (i.e., no `--release`)
+[profile.dev]
+debug = true
+incremental = true
+# Always optimize. Otherwise, building and running the guest takes too long.
+opt-level = 3
+overflow-checks = true
+panic = "unwind"
+
+# Configures release builds
+[profile.release]
+debug = false
+incremental = false
+lto = true
+opt-level = 3
+
+# Configures tests
+[profile.test]

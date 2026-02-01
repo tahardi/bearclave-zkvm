@@ -1,0 +1,16 @@
+[package]
+categories = ["cryptography"]
+description = "A RISC0 zkVM for verifying Intel TDX Attestations"
+edition = "2024"
+keywords = ["zkvm", "risc0", "intel-tdx", "attestation"]
+license = "UNLICENSED"
+name = "tdx-verifier-methods"
+readme = "../README.md"
+repository = "https://github.com/tahardi/bearzero"
+version = "0.1.0"
+
+[build-dependencies]
+risc0-build = { version = "^3.0.4" }
+
+[package.metadata.risc0]
+methods = ["guest"]

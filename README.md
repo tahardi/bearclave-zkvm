@@ -1,2 +1,1 @@
-# BearZero
-
+# Bearclave: Verifying Attestations with zkVMs

@@ -19,9 +19,10 @@ fmt:
 
 .PHONY: lint
 lint:
-	@cargo clippy \
+	@RISC0_SKIP_BUILD=1 RISC0_SKIP_BUILD_KERNELS=1 cargo clippy \
 		--workspace \
 		-- \
 		-D warnings \
 		-W clippy::cargo \
-		-W clippy::pedantic
+		-W clippy::pedantic \
+		-A clippy::multiple_crate_versions

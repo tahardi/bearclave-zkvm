@@ -7,15 +7,15 @@ resolver = "3"
 # Provide paths to directories containing crates in the workspace
 members = ["host", "methods"]
 
-# Use latest edition
-[workspace.package]
-edition = "2024"
-
 # Place shared dependences here. In member crates set shared dependencies to
 # workspace = true
 [workspace.dependencies]
 risc0-build = { version = "^3.0.4" }
 risc0-zkvm = { version = "^3.0.4" }
+
+# Use latest edition
+[workspace.package]
+edition = "2024"
 
 # https://doc.rust-lang.org/cargo/reference/profiles.html
 # Configures bencharks

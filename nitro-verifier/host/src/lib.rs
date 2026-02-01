@@ -1,12 +1,37 @@
 use nitro_verifier_methods::MULTIPLY_ELF;
 use risc0_zkvm::{ExecutorEnv, Receipt, default_prover};
 
-// This is a Hello World demo for the RISC Zero zkVM.
-// By running the demo, Alice can produce a receipt that proves that she knows
-// some numbers a and b, such that a*b == 391.
-// The factors a and b are kept secret.
-
-// Compute the product a*b inside the zkVM
+/// Computes the product of two numbers using the RISC Zero zkVM.
+///
+/// This function demonstrates zero-knowledge proof generation using the RISC
+/// Zero zkVM. It proves knowledge of factors `a` and `b` such that `a * b`
+/// equals the returned product, without revealing the factors themselves.
+///
+/// # Arguments
+///
+/// * `a` - The first factor (kept secret in the proof)
+/// * `b` - The second factor (kept secret in the proof)
+///
+/// # Returns
+///
+/// A tuple containing:
+/// * `Receipt` - A zero-knowledge proof that the computation was performed correctly
+/// * `u64` - The product of `a` and `b`
+///
+/// # Panics
+///
+/// Panics if:
+/// * The `ExecutorEnv` fails to build
+/// * The prover fails to generate a valid receipt
+/// * The journal output cannot be decoded as a `u64`
+///
+/// # Example
+///
+/// ```
+/// let (receipt, product) = multiply(17, 23);
+/// assert_eq!(product, 391);
+/// ```
+#[must_use]
 pub fn multiply(a: u64, b: u64) -> (Receipt, u64) {
     let env = ExecutorEnv::builder()
         // Send a & b to the guest

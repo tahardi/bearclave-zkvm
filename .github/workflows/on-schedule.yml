@@ -23,6 +23,9 @@ jobs:
       - name: Install Rust toolchain
         uses: actions-rust-lang/setup-rust-toolchain@v1
 
+      - name: Install cargo-audit
+        run: cargo install cargo-audit
+
       - name: Audit ${{ matrix.crate }}
         working-directory: ${{ matrix.crate }}
         run: make audit

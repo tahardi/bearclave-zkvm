@@ -1,10 +1,10 @@
 [package]
 categories = ["cryptography"]
-description = "A RISC0 zkVM for verifying Intel TDX Attestations"
+description = "A RISC0 zkVM for verifying factors of a given product"
 edition = "2024"
-keywords = ["zkvm", "risc0", "intel-tdx", "attestation"]
+keywords = ["zkvm", "risc0"]
 license = "UNLICENSED"
-name = "tdx-verifier-methods"
+name = "factors-verifier-methods"
 readme = "../README.md"
 repository = "https://github.com/tahardi/bearzero"
 version = "0.1.0"

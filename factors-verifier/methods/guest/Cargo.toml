@@ -1,8 +1,8 @@
 [package]
 categories = []
-description = "A RISC0 zkVM for verifying AMD SEV-SNP Attestations"
+description = "A RISC0 zkVM for verifying the knowledge of factors for a given product"
 edition = "2024"
-keywords = ["zkvm", "risc0", "amd-sev-snp", "attestation"]
+keywords = ["zkvm", "risc0"]
 license = "UNLICENSED"
 name = "multiply"
 readme = "../../README.md"

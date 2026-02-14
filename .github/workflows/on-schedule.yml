@@ -15,7 +15,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        crate: [nitro-verifier, sev-verifier, tdx-verifier]
+        crate: [factors-verifier]
     steps:
       - name: Checkout Bearclave zkVM
         uses: actions/checkout@v6
@@ -35,7 +35,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        crate: [nitro-verifier, sev-verifier, tdx-verifier]
+        crate: [factors-verifier]
     steps:
       - name: Checkout Bearclave zkVM
         uses: actions/checkout@v6

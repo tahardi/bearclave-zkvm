@@ -8,6 +8,4 @@ SHELL := bash
 
 .PHONY: pre-pr
 pre-pr:
-	@make -C ./nitro-verifier/
-	@make -C ./sev-verifier/
-	@make -C ./tdx-verifier/
+	@make -C ./factors-verifier/

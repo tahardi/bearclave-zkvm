@@ -1,5 +1,5 @@
 # Workspaces are not crates themselves. Instead, they setup and build
-# member crates. For instance, the `tdx-verifier/` project has
+# member crates. For instance, the `factors-verifier/` project has
 # a `host` and `methods` crates which we specify as members
 [workspace]
 # Enable modern feature resolver (standard for Rust 2024+)

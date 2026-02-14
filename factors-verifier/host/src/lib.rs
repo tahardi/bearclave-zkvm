@@ -1,5 +1,5 @@
+use factors_verifier_methods::MULTIPLY_ELF;
 use risc0_zkvm::{ExecutorEnv, Receipt, default_prover};
-use sev_verifier_methods::MULTIPLY_ELF;
 
 /// Computes the product of two numbers using the RISC Zero zkVM.
 ///

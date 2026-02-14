@@ -1,10 +1,10 @@
-use host::multiply;
 use factors_verifier_methods::MULTIPLY_ID;
+use host::multiply;
 
 #[cfg(feature = "prove")]
-use risc0_ethereum_contracts::encode_seal;
-#[cfg(feature = "prove")]
 use hex;
+#[cfg(feature = "prove")]
+use risc0_ethereum_contracts::encode_seal;
 #[cfg(feature = "prove")]
 use serde_json::json;
 
@@ -32,6 +32,10 @@ fn main() {
             "image_id": hex::encode(image_id_bytes),
             "journal": hex::encode(receipt.journal.bytes),
         });
-        std::fs::write("proof.json", serde_json::to_string_pretty(&proof_json).unwrap()).unwrap();
+        std::fs::write(
+            "proof.json",
+            serde_json::to_string_pretty(&proof_json).unwrap(),
+        )
+        .unwrap();
     }
 }

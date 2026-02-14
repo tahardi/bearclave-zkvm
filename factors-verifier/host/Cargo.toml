@@ -1,0 +1,30 @@
+[package]
+categories = ["cryptography"]
+description = "A RISC0 zkVM for verifying factors of a product"
+edition = "2024"
+keywords = ["zkvm", "risc0"]
+license = "UNLICENSED"
+name = "host"
+readme = "../README.md"
+repository = "https://github.com/tahardi/bearzero"
+version = "0.1.0"
+
+[dependencies]
+hex = { version = "0.4.3" }
+factors-verifier-methods = { package = "factors-verifier-methods", path = "../methods" }
+risc0-zkvm = { version = "^3.0.4" }
+risc0-ethereum-contracts = { version = "3.0.1" }
+serde_json = { version = "1.0.149"}
+tracing-subscriber = { version = "0.3.22", features = ["env-filter"] }
+
+# These can either enable features in your dependencies (e.g., risc0-zkvm) or
+# affect change in your source code. That assumes your code does something like:
+# `cfg(feature = "prove")` to take action
+#
+# `cuda` enables GPU support for zkvm
+# `prove` enables true proof generation. Only turn on if you have GPU support or
+# a powerful CPU with lots of RAM ( >= 16BG). Otherwise, it's SUPER slow.
+[features]
+cuda = ["risc0-zkvm/cuda"]
+default = []
+prove = ["risc0-zkvm/prove"]

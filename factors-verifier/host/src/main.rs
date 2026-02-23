@@ -1,4 +1,4 @@
-use base64::{engine::general_purpose::STANDARD as BASE64, Engine};
+use base64::{Engine, engine::general_purpose::STANDARD as BASE64};
 use factors_verifier_methods::MULTIPLY_ID;
 use host::multiply;
 use serde_json::json;
@@ -28,7 +28,8 @@ fn main() {
         std::fs::write(
             "groth16.json",
             serde_json::to_string_pretty(&groth16_json).unwrap(),
-        ).unwrap();
+        )
+        .unwrap();
     }
 
     #[cfg(not(feature = "prove"))]
@@ -41,6 +42,7 @@ fn main() {
         std::fs::write(
             "stark.json",
             serde_json::to_string_pretty(&stark_json).unwrap(),
-        ).unwrap();
+        )
+        .unwrap();
     }
 }

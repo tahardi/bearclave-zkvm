@@ -3,3 +3,4 @@
 
 **/target/
 **/*.r.bk
+**/*.json

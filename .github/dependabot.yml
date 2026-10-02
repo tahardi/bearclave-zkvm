@@ -1,16 +1,6 @@
 version: 2
 updates:
   - package-ecosystem: "cargo"
-    directory: "/nitro-verifier"
-    schedule:
-      interval: "weekly"
-
-  - package-ecosystem: "cargo"
-    directory: "/sev-verifier"
-    schedule:
-      interval: "weekly"
-
-  - package-ecosystem: "cargo"
-    directory: "/tdx-verifier"
+    directory: "/factors-verifier"
     schedule:
       interval: "weekly"

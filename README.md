@@ -22,9 +22,9 @@ circuit for each one, they are still orders of magnitude slower than running
 a program in a traditional computing environment. Thus, you want to minimize
 the scope of what you want to prove for your given application.
 
-This project will soon contain Rust crates for verifying TEE attestations using
-Risc Zero zkVMs. Specifically, it will support:
+This repository currently contains `factors-verifier`, a RISC Zero demo that
+proves knowledge of the factors of a number and produces a Groth16 seal. The
+bearclave-contracts repository verifies that seal on-chain (`FactorsVerifier.sol`).
 
-- AWS Nitro Enclaves
-- AMD SEV-SNP
-- Intel TDX
+zkVM verifiers for TEE attestations are being built for AWS Nitro Enclaves,
+AMD SEV-SNP, and Intel TDX, starting with AWS Nitro Enclaves.

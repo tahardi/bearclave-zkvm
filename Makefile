@@ -9,3 +9,4 @@ SHELL := bash
 .PHONY: pre-pr
 pre-pr:
 	@make -C ./factors-verifier/
+	@make -C ./nitro-verifier/

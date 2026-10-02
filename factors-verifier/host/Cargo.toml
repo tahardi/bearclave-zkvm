@@ -6,7 +6,7 @@ keywords = ["zkvm", "risc0"]
 license = "UNLICENSED"
 name = "host"
 readme = "../README.md"
-repository = "https://github.com/tahardi/bearzero"
+repository = "https://github.com/tahardi/bearclave-zkvm"
 version = "0.1.0"
 
 [dependencies]

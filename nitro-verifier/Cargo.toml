@@ -1,0 +1,23 @@
+[workspace]
+resolver = "3"
+members = ["nitro-attestation"]
+
+[workspace.package]
+edition = "2024"
+
+[profile.bench]
+
+[profile.dev]
+debug = true
+incremental = true
+opt-level = 3
+overflow-checks = true
+panic = "unwind"
+
+[profile.release]
+debug = false
+incremental = false
+lto = true
+opt-level = 3
+
+[profile.test]

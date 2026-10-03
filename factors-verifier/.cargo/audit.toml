@@ -1,18 +1,25 @@
 [advisories]
 ignore = [
-    # No fix available
+    # rsa: Marvin attack timing side channel can leak private keys.
+    # Ignored because no fixed release exists and we never use RSA private keys.
     "RUSTSEC-2023-0071",
-    # Unmaintained - transitive dep
+    # paste: unmaintained.
+    # Ignored because it is a transitive dependency with no known vulnerability.
     "RUSTSEC-2024-0436",
-    # Unmaintained - transitive dep
+    # number_prefix: unmaintained.
+    # Ignored because it is a transitive dependency with no known vulnerability.
     "RUSTSEC-2025-0119",
-    # Unmaintained - transitive dep
+    # derivative: unmaintained.
+    # Ignored because it is a transitive dependency with no known vulnerability.
     "RUSTSEC-2024-0388",
-    # Unmaintained - transitive dep
+    # bincode: unmaintained.
+    # Ignored because it is a transitive dependency with no known vulnerability.
     "RUSTSEC-2025-0141",
-    # Unmaintained - transitive dep
+    # atomic-polyfill: unmaintained.
+    # Ignored because it is a transitive dependency with no known vulnerability.
     "RUSTSEC-2023-0089",
-    # Fix available but pulled in by transitive dep
+    # tracing-subscriber 0.2: logged user input can inject ANSI escape sequences into logs.
+    # Ignored because the fix is in 0.3, but a transitive dependency pins 0.2.
     "RUSTSEC-2025-0055",
 ]
 severity_threshold = "low"

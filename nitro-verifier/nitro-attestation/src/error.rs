@@ -30,4 +30,6 @@ pub enum Error {
     KeyUsage { index: usize },
     #[error("verifying cose signature")]
     InvalidSignature,
+    #[error("missing pcr {0}")]
+    MissingPcr(u64),
 }

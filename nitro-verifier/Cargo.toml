@@ -1,6 +1,10 @@
 [workspace]
 resolver = "3"
-members = ["nitro-attestation"]
+members = ["nitro-attestation", "methods", "host"]
+
+[workspace.dependencies]
+risc0-build = { version = "=3.0.5" }
+risc0-zkvm = { version = "=3.0.5" }
 
 [workspace.package]
 edition = "2024"

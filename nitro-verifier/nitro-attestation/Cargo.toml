@@ -10,6 +10,7 @@ repository = "https://github.com/tahardi/bearclave-zkvm"
 version = "0.1.0"
 
 [dependencies]
+alloy-sol-types = "1"
 ciborium = "0.2.2"
 const-oid = { version = "0.9", features = ["db"] }
 coset = "0.4.2"

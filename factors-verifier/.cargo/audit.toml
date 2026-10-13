@@ -21,6 +21,7 @@ ignore = [
     # tracing-subscriber 0.2: logged user input can inject ANSI escape sequences into logs.
     # Ignored because the fix is in 0.3, but a transitive dependency pins 0.2.
     "RUSTSEC-2025-0055",
+    "RUSTSEC-2026-0344",
 ]
 severity_threshold = "low"
 

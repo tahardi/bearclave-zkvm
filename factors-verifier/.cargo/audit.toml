@@ -23,7 +23,7 @@ ignore = [
     "RUSTSEC-2025-0055",
     # ruzstd 0.7: a tiny input can exhaust memory when decompressed.
     # Ignored because it is only built with risc0-zkvm's prove feature, where it reads our own guest binaries,
-    # and the fix requires a major risc0-zkvm upgrade.
+    # and no risc0-zkvm release, including 5.0.0-rc.1, uses an object crate with the fixed ruzstd yet.
     "RUSTSEC-2026-0344",
 ]
 severity_threshold = "low"

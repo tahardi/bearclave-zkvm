@@ -1,0 +1,16 @@
+[package]
+categories = ["cryptography"]
+description = "A RISC Zero guest that verifies AWS Nitro attestation documents"
+edition = "2024"
+keywords = ["zkvm", "risc0", "nitro"]
+license = "UNLICENSED"
+name = "verify-nitro"
+readme = "../../README.md"
+repository = "https://github.com/tahardi/bearclave-zkvm"
+version = "0.1.0"
+
+[workspace]
+
+[dependencies]
+nitro-attestation = { path = "../../nitro-attestation" }
+risc0-zkvm = { version = "=3.0.5", default-features = false, features = ["std"] }

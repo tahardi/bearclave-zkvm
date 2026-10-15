@@ -1,0 +1,16 @@
+[package]
+categories = ["cryptography"]
+description = "RISC Zero guest methods for verifying AWS Nitro attestation documents"
+edition = "2024"
+keywords = ["zkvm", "risc0", "nitro"]
+license = "UNLICENSED"
+name = "nitro-verifier-methods"
+readme = "../README.md"
+repository = "https://github.com/tahardi/bearclave-zkvm"
+version = "0.1.0"
+
+[build-dependencies]
+risc0-build = { workspace = true }
+
+[package.metadata.risc0]
+methods = ["guest"]

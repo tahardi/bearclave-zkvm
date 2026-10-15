@@ -7,7 +7,7 @@ SHELL := bash
 .SUFFIXES:
 
 .PHONY: pre-pr
-pre-pr: fmt lint audit test-unit
+pre-pr: fmt lint audit test-unit test-guest
 
 .PHONY: audit
 audit:
@@ -19,7 +19,7 @@ fmt:
 
 .PHONY: lint
 lint:
-	@cargo clippy \
+	@RISC0_SKIP_BUILD=1 cargo clippy \
 		--workspace \
 		--all-targets \
 		-- \
@@ -33,3 +33,7 @@ lint:
 .PHONY: test-unit
 test-unit:
 	@cargo test -p nitro-attestation
+
+.PHONY: test-guest
+test-guest:
+	@cargo test -p host

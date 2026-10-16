@@ -37,3 +37,33 @@ test-unit:
 .PHONY: test-guest
 test-guest:
 	@cargo test -p host
+
+.PHONY: image-id
+image-id:
+	@RISC0_USE_DOCKER=1 cargo run -q -p host -- image-id
+
+.PHONY: image-id-check
+image-id-check:
+	@diff <(RISC0_USE_DOCKER=1 cargo run -q -p host -- image-id) image-id.txt
+
+.PHONY: prove
+prove:
+	@RISC0_USE_DOCKER=1 cargo run \
+		--release \
+		-p host \
+		-F prove \
+		-- \
+		prove \
+		nitro-attestation/testdata/nitro-report-b64.txt \
+		proofs/groth16.json
+
+.PHONY: prove-cuda
+prove-cuda:
+	@RISC0_USE_DOCKER=1 cargo run \
+		--release \
+		-p host \
+		-F prove,cuda \
+		-- \
+		prove \
+		nitro-attestation/testdata/nitro-report-b64.txt \
+		proofs/groth16.json

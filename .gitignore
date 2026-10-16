@@ -4,3 +4,4 @@
 **/target/
 **/*.r.bk
 **/*.json
+!nitro-verifier/proofs/*.json

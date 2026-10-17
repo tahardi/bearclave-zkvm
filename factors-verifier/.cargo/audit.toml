@@ -25,6 +25,12 @@ ignore = [
     # Ignored because it is only built with risc0-zkvm's prove feature, where it reads our own guest binaries,
     # and no risc0-zkvm release, including 5.0.0-rc.1, uses an object crate with the fixed ruzstd yet.
     "RUSTSEC-2026-0344",
+    # zip 2.4: extract() can follow symlinks and keep SUID/SGID bits when writing files to disk.
+    # Ignored because risc0-circuit-recursion only reads its own embedded archive in memory and never calls extract(),
+    # and no risc0 release, including 5.0.0-rc.1, allows zip 9.0.0 or newer yet.
+    "RUSTSEC-2026-0367",
+    "RUSTSEC-2026-0368",
+    "RUSTSEC-2026-0369",
 ]
 severity_threshold = "low"
 

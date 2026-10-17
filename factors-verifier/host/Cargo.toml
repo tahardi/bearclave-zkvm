@@ -10,7 +10,7 @@ repository = "https://github.com/tahardi/bearclave-zkvm"
 version = "0.1.0"
 
 [dependencies]
-base64 = { version = "0.22.1" }
+base64 = { version = "0.23.1" }
 hex = { version = "0.4.3" }
 factors-verifier-methods = { package = "factors-verifier-methods", path = "../methods" }
 risc0-zkvm = { version = "3.0.1" }

@@ -31,6 +31,10 @@ ignore = [
     "RUSTSEC-2026-0367",
     "RUSTSEC-2026-0368",
     "RUSTSEC-2026-0369",
+    "RUSTSEC-2026-0429",
+    # crypto-bigint 0.5: some constant-time operations have timing variability.
+    # Ignored because we only verify signatures with public keys, and alloy-primitives 1.7.3 still requires k256 0.13.
+    "RUSTSEC-2026-0387",
 ]
 severity_threshold = "low"
 
